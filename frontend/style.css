@@ -1,0 +1,171 @@
+:root {
+    --primary: #1f3c88;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #ffffff;
+    --chip-bg: #f3f4f6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.resume {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    padding: 40px 24px;
+}
+
+/* ===== Left Column ===== */
+.sidebar {
+    border-right: 1px solid var(--border);
+    padding-right: 32px;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.role {
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.contact {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.contact div {
+    margin-bottom: 6px;
+}
+
+.section {
+    margin-top: 32px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* ===== Chips ===== */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    font-size: 12px;
+    padding: 6px 10px;
+    background: var(--chip-bg);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+/* ===== Right Column ===== */
+.main {
+    padding-left: 8px;
+}
+
+.summary {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 32px;
+}
+
+/* ===== Experience ===== */
+.experience-item {
+    margin-bottom: 28px;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.exp-title {
+    font-weight: 600;
+}
+
+.exp-company {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.exp-date {
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.exp-location {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.exp-points {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.exp-points li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* ===== Projects ===== */
+.project {
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.project-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.project-desc {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .resume {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 32px;
+    }
+}
